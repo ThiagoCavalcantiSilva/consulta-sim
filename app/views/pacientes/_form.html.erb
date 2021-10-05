@@ -31,7 +31,15 @@
     <%= form.text_field :email %>
   </div>
 
+  <div class="field">
+    <legend>Enderecos:</legend>
+    <%= form.fields_for :enderecos do |enderecos_form| %>
+      <%= render "endereco_fields", f: enderecos_form %>
+    <% end %>
+    <%= link_to_add_fields "Adicionar enderecos", form, :enderecos %>
+  </div>
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit value = "Concluir" %>
   </div>
 <% end %>

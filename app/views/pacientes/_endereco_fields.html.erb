@@ -1,0 +1,27 @@
+<%# app/views/people/_address_fields.html.erb %>
+<div class="nested-fields">
+  <%= f.hidden_field :_destroy %>
+  <div>
+    <%= f.label :CEP %>
+    <%= f.text_field :CEP %>
+  </div>
+  <div>
+    <%= f.label :Cidade %>
+    <%= f.text_field :cidade %>
+  </div>
+  <div>
+    <%= f.label :Bairro %>
+    <%= f.text_field :bairro %>
+  </div>
+  <div>
+    <%= f.label :Logradouro %>
+    <%= f.text_field :logradouro %>
+  </div>
+  <div>
+    <%= f.label :Complemento %>
+    <%= f.text_field :complemento %>
+  </div>
+  <div>
+    <%= link_to "Remover", '#', class: "remove_fields" %>
+  </div>
+</div>
