@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome completo:</strong>
+  <%= @paciente.nomeCompleto %>
+</p>
+
+<p>
+  <strong>Data de nascimento:</strong>
+  <%= @paciente.dataNascimento %>
+</p>
+
+<p>
+  <strong>CPF:</strong>
+  <%= @paciente.CPF %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @paciente.email %>
+</p>
+
+<%= link_to 'Editar', edit_paciente_path(@paciente) %> |
+<%= link_to 'Voltar', pacientes_path %>
