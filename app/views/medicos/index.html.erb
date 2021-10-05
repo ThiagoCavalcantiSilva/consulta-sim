@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Medicos</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Nome completo</th>
+    <th>Data de nascimento</th>
+    <th>CPF</th>
+    <th>Email</th>
+    <th>Especialidade</th>
+    <th>CRM</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @medicos.each do |medico| %>
+    <tr>
+      <td><%= medico.nomeCompleto %></td>
+      <td><%= medico.dataNascimento %></td>
+      <td><%= medico.CPF %></td>
+      <td><%= medico.email %></td>
+      <td><%= medico.especialidade %></td>
+      <td><%= medico.CRM %></td>
+      <td><%= link_to 'Visualizar', medico %></td>
+      <td><%= link_to 'Editar', edit_medico_path(medico) %></td>
+      <td><%= link_to 'Apagar', medico, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Cadastrar medico', new_medico_path %>
+<%= link_to 'Voltar', root_path %>

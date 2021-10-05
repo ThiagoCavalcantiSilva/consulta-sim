@@ -1,0 +1,47 @@
+<%= form_with(model: medico) do |form| %>
+  <% if medico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(medico.errors.count, "error") %> prohibited this medico from being saved:</h2>
+
+      <ul>
+        <% medico.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Nome_completo %>
+    <%= form.text_field :nomeCompleto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Data_de_nascimento %>
+    <%= form.date_field :dataNascimento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CPF %>
+    <%= form.text_field :CPF %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Especialidade %>
+    <%= form.text_field :especialidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CRM %>
+    <%= form.text_field :CRM %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit value = "Concluir"%>
+  </div>
+<% end %>
