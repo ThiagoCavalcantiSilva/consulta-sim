@@ -25,7 +25,7 @@ class MedicosController < ApplicationController
 
     respond_to do |format|
       if @medico.save
-        format.html { redirect_to @medico, notice: "Medico criado com sucesso." }
+        format.html { redirect_to @medico, notice: "Médico criado com sucesso." }
         format.json { render :show, status: :created, location: @medico }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class MedicosController < ApplicationController
   def update
     respond_to do |format|
       if @medico.update(medico_params)
-        format.html { redirect_to @medico, notice: "Medico atualizado com sucesso." }
+        format.html { redirect_to @medico, notice: "Médico atualizado com sucesso." }
         format.json { render :show, status: :ok, location: @medico }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,7 +51,7 @@ class MedicosController < ApplicationController
   def destroy
     @medico.destroy
     respond_to do |format|
-      format.html { redirect_to medicos_url, notice: "Medico apagado com sucesso." }
+      format.html { redirect_to medicos_url, notice: "Médico apagado com sucesso." }
       format.json { head :no_content }
     end
   end

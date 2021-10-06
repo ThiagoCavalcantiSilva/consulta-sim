@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :nomeCompleto %>
+    <%= form.label :Nome_Completo %>
     <%= form.text_field :nomeCompleto %>
   </div>
 
   <div class="field">
-    <%= form.label :dataNascimento %>
-    <%= form.date_select :dataNascimento %>
+    <%= form.label :Data_de_nascimento %>
+    <%= form.date_field :dataNascimento %>
   </div>
 
   <div class="field">
@@ -27,7 +27,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label :Email %>
     <%= form.text_field :email %>
   </div>
 
@@ -36,7 +36,7 @@
     <%= form.fields_for :enderecos do |enderecos_form| %>
       <%= render "endereco_fields", f: enderecos_form %>
     <% end %>
-    <%= link_to_add_fields "Adicionar enderecos", form, :enderecos %>
+    <%= link_to_add_fields "Adicionar endereços", form, :enderecos %>
   </div>
 
   <div class="actions">
