@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @consultum.data %>
+</p>
+
+<p>
+  <strong>Horario:</strong>
+  <%= @consultum.horario %>
+</p>
+
+<p>
+  <strong>Medico:</strong>
+  <%= @consultum.medico.nomeCompleto %>
+</p>
+
+<p>
+  <strong>Paciente:</strong>
+  <%= @consultum.paciente.nomeCompleto %>
+</p>
+
+<%= link_to 'Editar', edit_consultum_path(@consultum) %> |
+<%= link_to 'Voltar', consulta_path %>
