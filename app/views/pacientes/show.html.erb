@@ -20,5 +20,29 @@
   <%= @paciente.email %>
 </p>
 
+<p>
+  <strong>Consultas:</strong><br>
+<table>
+  <thead>
+  <tr>
+    <th>Data</th>
+    <th>Horário</th>
+    <th>Médico</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @paciente.consultum.each do |consultum| %>
+    <tr>
+      <td><%= consultum.data %></td>
+      <td><%= consultum.horario.strftime("%H:%M") %></td>
+      <td><%= consultum.medico.nomeCompleto %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+</p>
+
 <%= link_to 'Editar', edit_paciente_path(@paciente) %> |
 <%= link_to 'Voltar', pacientes_path %>
