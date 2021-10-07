@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Consulta</h1>
+<center><h1>Consulta</h1></center>
 
 <table>
   <thead>
@@ -17,7 +17,7 @@
   <% @consulta.each do |consultum| %>
     <tr>
       <td><%= consultum.data %></td>
-      <td><%= consultum.horario %></td>
+      <td><%= consultum.horario.strftime("%H:%M") %></td>
       <td><%= consultum.medico.nomeCompleto %></td>
       <td><%= consultum.paciente.nomeCompleto %></td>
       <td><%= link_to 'Visualizar', consultum %></td>
