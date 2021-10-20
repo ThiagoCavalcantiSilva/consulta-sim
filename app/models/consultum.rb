@@ -12,8 +12,8 @@ class Consultum < ApplicationRecord
 
   validate :validarHorario
   def validarHorario
-    if data.present? && Date.today && horario < Time.current
-      errors.add(:horario, "Horainválida ")
+    if data.present? && Date.today==data && horario < Time.current
+      errors.add(:horario, "Hora inválida")
     end
   end
 end

@@ -26,7 +26,7 @@
       <td><%= medico.CRM %></td>
       <td><%= link_to 'Visualizar', medico %></td>
       <td><%= link_to 'Editar', edit_medico_path(medico) %></td>
-      <td><%= link_to 'Apagar', medico, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      <td><%= link_to 'Apagar', medico, method: :delete, data: { confirm: 'Tem certeza?' }, id:"a-#{medico.CRM}" %></td>
     </tr>
   <% end %>
   </tbody>
