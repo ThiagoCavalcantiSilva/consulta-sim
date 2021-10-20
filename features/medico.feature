@@ -24,3 +24,9 @@ Feature: Medico
     When altero o CRM para '123456789'
     And clico em concluir
     Then eu vejo uma mensagem de CRM com tamanho errado
+
+  # Negativo
+  Scenario: cadastrar medico com data de nascimento invalida
+    Given estou na pagina de cadastro de medico
+    When eu crio um medico com nome 'Jose Fernando', data de nascimento '2050-07-26', cpf '12345678919', email 'josef@gmail.com', especialidade 'Oftalmologista' e CRM '01023'
+    Then eu vejo uma mensagem de data invalida
