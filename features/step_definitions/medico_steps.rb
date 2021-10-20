@@ -53,3 +53,12 @@ end
 Then('eu vejo uma mensagem que o medico foi apagado com sucesso') do
   expect(page).to have_content('Médico apagado com sucesso.')
 end
+
+When('altero o CRM para {string}') do |string|
+  fill_in 'medico[CRM]', :with => string
+end
+
+Then('eu vejo uma mensagem de CRM com tamanho errado') do
+  expect(page).to have_content("Crm is the wrong length (should be 5 characters)")
+  #assert_selector('div#error_explanation', text:'')
+end

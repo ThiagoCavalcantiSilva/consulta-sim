@@ -17,3 +17,10 @@ Feature: Medico
     And o medico com CRM '11223' existe
     When eu clico em remover o medico com CRM '11223'
     Then eu vejo uma mensagem que o medico foi apagado com sucesso
+
+  # Negativo
+  Scenario: editar medico inserindo CRM invalido
+    Given estou na pagina de edicao de medico
+    When altero o CRM para '123456789'
+    And clico em concluir
+    Then eu vejo uma mensagem de CRM com tamanho errado
